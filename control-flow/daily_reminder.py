@@ -11,13 +11,14 @@ case "medium":
     label = 'Reminder'
 case "low":
     message = 'task, is a low priority task'
-    label = 'Note'
+    label = 'Reminder'
 case _:
     message = 'task, has an unspecified priority'
 
 if time_bound == 'yes':
     message += 'that requires immediate attention today!'
 else:
-    message += '. Consider completing it when you have free time.'
+    message += 'Consider completing it when you have free time.'
+
 
 print(label:, message)
