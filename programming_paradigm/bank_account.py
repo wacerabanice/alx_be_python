@@ -12,7 +12,8 @@ class BankAccount:
         if amount <= 0:
             return "Withdrawal amount must be positive."
         if amount > self.account_balance:
-            return "Insufficient funds."
+            return False
+        else:
         self.account_balance -= amount
         return f"Withdrew: ${amount}"
 
